@@ -1,0 +1,11 @@
+Data Fields:
+- Job ID
+- Title
+- Company
+- Listing Date
+- Abstract
+- Job Type
+- Location (City)
+- Area (Suburb)
+- Bullet Points
+- URL 
