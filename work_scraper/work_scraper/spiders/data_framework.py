@@ -1,7 +1,7 @@
 import pandas as pd
 
 def TradeMe():
-    df = pd.read_json('/Users/TJ/Documents/GitHub/work_scraper/work_scraper/work_scraper/spiders/trademe.jl', lines = True)
+    df = pd.read_json('/Users/TJ/Documents/GitHub/workFlow/work_scraper/work_scraper/spiders/trademe.jl', lines = True)
 
     # fix date
     df['StartDate'] = df['StartDate'].replace(to_replace= '.*\((\d+).*', value=r"\1", regex=True)
@@ -30,7 +30,7 @@ def TradeMe():
     return tradeMe_df
 
 def Seek():
-    df = pd.read_json('/Users/TJ/Documents/GitHub/work_scraper/work_scraper/work_scraper/spiders/seek.jl', lines = True)
+    df = pd.read_json('/Users/TJ/Documents/GitHub/workFlow/work_scraper/work_scraper/spiders/seek.jl', lines = True)
 
     # fix date
     df['listingDate'] = pd.Timestamp('2020-02-13T13:00:00Z').strftime('%Y-%m-%d %H:%M:%S')
